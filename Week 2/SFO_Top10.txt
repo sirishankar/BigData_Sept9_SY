@@ -1,0 +1,11 @@
+>select * from city limit 10
+200507	ATA Airlines	TZ	ATA Airlines	TZ	Domestic	US	Deplaned	Low Fare	Terminal 1	B	27271
+200507	ATA Airlines	TZ	ATA Airlines	TZ	Domestic	US	Enplaned	Low Fare	Terminal 1	B	29131
+200507	ATA Airlines	TZ	ATA Airlines	TZ	Domestic	US	Thru / Transit	Low Fare	Terminal 1	B	5415
+200507	Air Canada	AC	Air Canada	AC	International	Canada	Deplaned	Other	Terminal 1	B	35156
+200507	Air Canada	AC	Air Canada	AC	International	Canada	Enplaned	Other	Terminal 1	B	34090
+200507	Air China	CA	Air China	CA	International	Asia	Deplaned	Other	International	G	6263
+200507	Air China	CA	Air China	CA	International	Asia	Enplaned	Other	International	G	5500
+200507	Air France	AF	Air France	AF	International	Europe	Deplaned	Other	International	A	12050
+200507	Air France	AF	Air France	AF	International	Europe	Enplaned	Other	International	A	11638
+200507	Air New Zealand	NZ	Air New Zealand	NZ	International	Australia / Oceania	Deplaned	Other	International	G	4998
