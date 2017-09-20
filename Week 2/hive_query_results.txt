@@ -1,0 +1,60 @@
+>SELECT name FROM employee WHERE deductions['Federal Taxes'] > 0.2
+John Doe	{"street":"1 Michigan Ave.","city":"Chicago","state":"IL","zip":60600}
+Mary Smith	{"street":"100 Ontario St.","city":"Chicago","state":"IL","zip":60601}
+Boss Man	{"street":"1 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
+Fred Finance	{"street":"2 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
+
+
+>SELECT name FROM employee WHERE subordinates[1] = 'Todd Jones'
+John Doe
+
+
+>SELECT name FROM employee WHERE size(subordinates) > 0
+John Doe
+Mary Smith
+Boss Man
+Fred Finance
+
+
+>SELECT name FROM employee WHERE address.zip = 60050
+
+
+>SELECT e.name, e.subordinates[0] FROM employee e
+John Doe	Mary Smith
+Mary Smith	Bill King
+Todd Jones	NULL
+Bill King	NULL
+Boss Man	John Doe
+Fred Finance	Stacy Accountant
+Stacy Accountant	NULL
+
+
+>SELECT e.name, e.subordinates FROM employee e WHERE size(e.subordinates) > 0
+John Doe	["Mary Smith","Todd Jones"]
+Mary Smith	["Bill King"]
+Boss Man	["John Doe","Fred Finance"]
+Fred Finance	["Stacy Accountant"]
+
+
+>SELECT e.name, e.deductions['Federal Taxes'] FROM employee e
+John Doe	0.2
+Mary Smith	0.2
+Todd Jones	0.15
+Bill King	0.15
+Boss Man	0.3
+Fred Finance	0.3
+Stacy Accountant	0.15
+
+
+>SELECT e.name, e.address FROM employee e WHERE e.address.city = 'Chicago'
+John Doe	{"street":"1 Michigan Ave.","city":"Chicago","state":"IL","zip":60600}
+Mary Smith	{"street":"100 Ontario St.","city":"Chicago","state":"IL","zip":60601}
+Boss Man	{"street":"1 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
+Fred Finance	{"street":"2 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
+
+
+>SELECT e.name, e.address FROM employee e WHERE e.address.city LIKE 'C%'
+John Doe	{"street":"1 Michigan Ave.","city":"Chicago","state":"IL","zip":60600}
+Mary Smith	{"street":"100 Ontario St.","city":"Chicago","state":"IL","zip":60601}
+Boss Man	{"street":"1 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
+Fred Finance	{"street":"2 Pretentious Drive.","city":"Chicago","state":"IL","zip":60500}
