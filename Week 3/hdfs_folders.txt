@@ -1,0 +1,10 @@
+Found 3 items
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:38 data/pub
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:37 data/raw
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:37 data/stage
+Found 1 items
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:37 data/raw/consumer_data_raw
+Found 1 items
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:37 data/stage/consumer_data_stage
+Found 1 items
+drwxr-xr-x   - ubuntu ubuntu          0 2017-10-06 01:38 data/pub/consumer_data_pub
