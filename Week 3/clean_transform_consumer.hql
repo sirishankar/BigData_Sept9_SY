@@ -1,0 +1,1 @@
+select datereceived,product,subproduct,issue,subissue,company,state,zipcode,submitted_via,datesenttocompany,timelyresponse,consumerdisputed,complaintid from consumer_data where state is not null or (zipcode is not null and zipcode not like '%XX') limit 10;
